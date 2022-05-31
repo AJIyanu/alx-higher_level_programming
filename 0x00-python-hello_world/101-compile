@@ -1,2 +1,2 @@
 #!/bin/bash
-shc -f $PYFILE -o main.pyc
+shc -f $PYFILE -o $PYFILEc
