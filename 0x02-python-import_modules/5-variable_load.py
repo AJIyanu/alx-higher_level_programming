@@ -3,4 +3,5 @@
 
 from variable_load_5 import a
 if __name__ == "__main__":
-    print(variable_load_5.a)
+    b = variable_load_5.a
+    print(b)
