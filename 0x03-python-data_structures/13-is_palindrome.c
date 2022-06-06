@@ -2,38 +2,7 @@
 #include <stdio.h>
 #include "lists.h"
 
-/**
- * intatindex - checks the integer value at index values
- * @index1: first index to check Number
- * @index2: second index to check Number
- * @head: address of the head of list
- *
- * Return: 1 if numbers are the same and 0 if different
- */
 
-int intatindex(listint_t *head, unsigned int index1, unsigned int index2)
-{
-	listint_t *ptr = head;
-	unsigned int n = 1;
-	int A, J;
-
-	while (ptr != NULL)
-	{
-		if (n == index1)
-			A = ptr->n;
-		if (n == index2)
-		{
-			J = ptr->n;
-			break;
-		}
-		ptr = ptr->next;
-		n++;
-	}
-	if (A == J)
-		return (1);
-	else
-		return (0);
-}
 /**
  * lent - counts to the end of list
  * @head: address of head list
@@ -69,6 +38,8 @@ int is_palindrome(listint_t **head)
 	int J = 1;
 	int i;
 
+	if (ptr == NULL || ptr->next == NULL)
+		return (1);
 	n = lent(ptr);
 	list = malloc(sizeof(int) * n);
 	if (list == NULL)
