@@ -46,7 +46,7 @@ int lent(listint_t *head)
 	int n = 1;
 	listint_t *ptr = head;
 
-	while(ptr->next != NULL)
+	while (ptr->next != NULL)
 	{
 		n++;
 		ptr = ptr->next;
@@ -70,15 +70,12 @@ int is_palindrome(listint_t **head)
 
 	if (ptr == NULL || ptr->next == NULL)
 		return (1);
-	else
+	len = lent(ptr);
+	for (i = 1; i <= (len / 2); i++)
 	{
-		len = lent(ptr);
-		for (i = 1; i <= (len/2); i++)
-		{
-			check = intatindex(ptr, i, len - i + 1);
-			if (check == 0)
-				break;
-		}
-		return (check);
+		check = intatindex(ptr, i, len - i + 1);
+		if (check == 0)
+			break;
 	}
+	return (check);
 }
