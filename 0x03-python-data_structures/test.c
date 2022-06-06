@@ -64,27 +64,18 @@ int lent(listint_t *head)
 int is_palindrome(listint_t **head)
 {
 	listint_t *ptr = *head;
-	int *list = NULL;
-	int n = 0;
-	int J = 1;
+	int check = 0;
+	int len;
 	int i;
 
-	n = lent(ptr);
-	list = malloc(sizeof(int) * n);
-	if (list == NULL)
+	if (ptr == NULL || ptr->next == NULL)
+		return (1);
+	len = lent(ptr);
+	for (i = 1; i <= (len / 2); i++)
 	{
-		perror("try again");
-		exit(0);
+		check = intatindex(ptr, i, len - i + 1);
+		if (check == 0)
+			break;
 	}
-	for (i = 0; i < n; i++)
-	{
-		list[i] = ptr->n;
-		ptr=ptr->next;
-	}
-	for (i = 0; i < (n / 2); i++)
-	{
-		if (list[i] != list[n - i - 1])
-		J = 0;
-	}
-	return (J);
+	return (check);
 }
