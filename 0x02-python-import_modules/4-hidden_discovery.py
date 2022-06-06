@@ -5,5 +5,6 @@ if __name__ == "__main__":
     n = len(names)
     for i in range(n):
         ch = names[i][0]
-        if ch != '_':
+        ch1 = names[i][1]
+        if ch != '_' and ch1 != '_':
             print(names[i])
