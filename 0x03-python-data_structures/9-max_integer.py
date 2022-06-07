@@ -9,3 +9,4 @@ def max_integer(my_list=[]):
     for i in range(n):
         if my_list[i] > j:
             j = my_list[i]
+    return (j)
