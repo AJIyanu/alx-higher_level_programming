@@ -8,4 +8,3 @@ def common_elements(set_1, set_2):
                 if a == j:
                    common.add(j)
     return (common)
-
