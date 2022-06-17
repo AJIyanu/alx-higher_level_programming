@@ -5,6 +5,8 @@ def best_score(a_dictionary):
     if a_dictionary is None:
         return (None)
     key = a_dictionary.keys()
+    if len(key) == 0:
+        return (None)
     best = 0
     for aj in key:
         if a_dictionary[aj] > best:
