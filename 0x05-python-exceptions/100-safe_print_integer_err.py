@@ -3,8 +3,8 @@
 
 def safe_print_integer_err(value):
     try:
-        print("{:d}".format(int(value)))
+        print("{:d}".format(value))
     except Exception as mess:
-        print(mess)
+        print("Exception: {}".format(mess))
         return (False)
     return (True)
