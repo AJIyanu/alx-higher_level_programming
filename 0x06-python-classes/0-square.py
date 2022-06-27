@@ -4,6 +4,8 @@
 """
 This module is for a square
 """
+
+
 class Square(object):
     """
     This is an example of a module level function.
@@ -12,7 +14,6 @@ class Square(object):
     of each parameter is required. The type and description of each parameter
     is optional, but should be included if not obvious.
 
-    If \*args or \*\*kwargs are accepted,
     they should be listed as ``*args`` and ``**kwargs``.
 
     The format for a parameter is::
