@@ -1,8 +1,12 @@
 #!/usr/bin/python3
 
 
-class Square:
-    """This is an example of a module level function.
+"""
+This module is for a square
+"""
+class Square(object):
+    """
+    This is an example of a module level function.
 
     Function parameters should be documented in the ``Args`` section. The name
     of each parameter is required. The type and description of each parameter
@@ -51,7 +55,8 @@ class Square:
 
     """
     def __init__(self):
-        """Example of docstring on the __init__ method.
+        """
+        Example of docstring on the __init__ method.
 
         The __init__ method may be documented in either the class level
         docstring, or as a docstring on the __init__ method itself.
