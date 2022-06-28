@@ -21,6 +21,8 @@ class Square(object):
         self._Square__size = _size
         if _position[0] < 0 or _position[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
+        if len(_position) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
         self._Square__position = _position
 
     def area(self):
@@ -62,13 +64,13 @@ class Square(object):
                 for j in range(self._Square__size):
                     print("#", end='')
                 print()
-    
+
     @property
     def position(self):
         """
         Postional receiver. I guess we can have two property decirator
         """
-        return (self._Sauare__position)
+        return (self._Square__position)
 
     @position.setter
     def position(self, value):
