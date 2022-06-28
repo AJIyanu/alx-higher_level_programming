@@ -19,9 +19,9 @@ class Square(object):
         if _size < 0:
             raise ValueError("size must be >= 0")
         self._Square__size = _size
+        if _position is not tuple:
+            raise TypeError("postion must be a tuple of 2 positive integers")
         if _position[0] < 0 or _position[1] < 0:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if len(_position) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         self._Square__position = _position
 
@@ -78,5 +78,7 @@ class Square(object):
         I almost forgot... nah i didnt not at all
         """
         if value[0] < 0 or value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if value is not tuple:
             raise TypeError("position must be a tuple of 2 positive integers")
         self._Square__position = value
