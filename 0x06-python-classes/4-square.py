@@ -39,7 +39,7 @@ class Square(object):
         This module has access to private instance and resets it
         """
         if type(value) is not int:
-            raise TypeError("size must be integer")
+            raise TypeError("size must be an integer")
         if value < 0:
-            raise ValueError("size must an be >= 0")
+            raise ValueError("size must be >= 0")
         self._Square__size = value
