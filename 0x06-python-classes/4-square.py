@@ -41,5 +41,5 @@ class Square(object):
         if type(value) is not int:
             raise TypeError("size must be integer")
         if value < 0:
-            raise ValueError("size must be >= 0")
+            raise ValueError("size must an be >= 0")
         self._Square__size = value
