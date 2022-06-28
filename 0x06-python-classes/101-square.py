@@ -90,6 +90,8 @@ class Square(object):
         This is gonna be a lot of work... lets create a list and return it.
         """
         string = ""
+        if self._Square__size == 0:
+            return (string)
         for y in range(self._Square__position[1]):
             string = string + '\n'
         for sq in range(self._Square__size):
