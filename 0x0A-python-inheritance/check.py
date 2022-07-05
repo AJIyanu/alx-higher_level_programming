@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-Square = __import__('10-square').Square
+inherits_from = __import__('4-inherits_from').inherits_from
 
-s = Square(4)
-print(s.area())
+a = [1, 2, 3]
+print(inherits_from(a, list))
