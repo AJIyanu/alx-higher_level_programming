@@ -14,4 +14,4 @@ def inherits_from(obj, a_class):
     it also check for base too
     implenting...
     """
-    return (type(obj) == a_class or issubclass(type(obj), a_class))
+    return (issubclass(type(obj), a_class))
