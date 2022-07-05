@@ -23,7 +23,7 @@ class Square(Rectangle):
         we validate the width
         likewise the length
         """
-        BaseGeometry.integer_validator(self, "size", size)
+        Rectangle.integer_validator(self, "size", size)
         self._Square__size = size
 
     def area(self):
