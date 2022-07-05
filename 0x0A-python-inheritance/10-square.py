@@ -34,11 +34,11 @@ class Square(BaseGeometry):
         """
         return (self._Square__size ** 2)
 
-    """
     def __str__(self):
+        """
         This prints the class and info about it
         The info ks what we have receive which cannor
         be changed
+        """
         pp = str(self._Square__size) + "/" + str(self._Square__size)
         return ("[Rectangle] " + pp)
-    """

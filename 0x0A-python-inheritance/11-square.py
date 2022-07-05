@@ -41,4 +41,4 @@ class Square(BaseGeometry):
         be changed
         """
         pp = str(self._Square__size) + "/" + str(self._Square__size)
-        return ("[Rectangle] " + pp)
+        return ("[Square] " + pp)
