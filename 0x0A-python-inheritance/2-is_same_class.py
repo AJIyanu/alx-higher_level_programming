@@ -14,4 +14,4 @@ def is_same_class(obj, a_class):
     if and object is a type of a class
     the objective is also the same
     """
-    return (type(obj) ==  a_class)
+    return (type(obj) == a_class)
