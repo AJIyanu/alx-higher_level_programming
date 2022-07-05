@@ -20,7 +20,6 @@ This is a simple test to check that our errors are raise successfully
 ... except Exception as e:
 ... 	print("[{}] {}".format(e.__class__.__name__, e))
 [ValueError] distance must be greater than 0
->>> bg = BaseGeometry()
 >>> try:
 ...	bg.area()
 ... except Exception as e:
