@@ -8,10 +8,10 @@ geomerty ya na daga object
 """
 
 
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+Rectangle = __import__('9-rectangle').Rectangle
 
 
-class Square(BaseGeometry):
+class Square(Rectangle):
     """
     We have inherited Geomentry into Rectangle
     Now we wirte cerrain methods for rectangle
@@ -23,7 +23,7 @@ class Square(BaseGeometry):
         we validate the width
         likewise the length
         """
-        BaseGeometry.integer_validator(self, "width", size)
+        BaseGeometry.integer_validator(self, "size", size)
         self._Square__size = size
 
     def area(self):
