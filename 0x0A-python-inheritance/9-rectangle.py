@@ -26,4 +26,21 @@ class Rectangle(BaseGeometry):
         BaseGeometry.integer_validator(self, "width", width)
         BaseGeometry.integer_validator(self, "height", height)
         self._Rectangle__width = width
-        self._Rectangle__length = height
+        self._Rectangle__height = height
+
+    def area(self):
+        """
+        computes the area of the rectangle
+        for those who do not know the formulae
+        it is the product of width and height
+        """
+        return (self._Rectangle__width * self._Rectangle__height)
+
+    def __str__(self):
+        """
+        This prints the class and info about it
+        The info ks what we have receive which cannor
+        be changed
+        """
+        pp = str(self._Rectangle__width) + "/" + str(self._Rectangle__height)
+        return ("[Rectangle] " + pp)
