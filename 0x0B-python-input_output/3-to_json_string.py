@@ -9,6 +9,9 @@ this is jason module
 
 
 import jason
+"""
+This module was needed for the task
+"""
 
 
 def to_json_string(my_obj):
