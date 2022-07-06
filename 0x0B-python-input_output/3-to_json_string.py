@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-__import__('jason')
 """
 This module deals with jason
 This is jason module
@@ -7,6 +6,8 @@ this is jason module
 this is jason module
 this is jason module
 """
+
+jason = __import__('jason')
 
 
 def to_json_string(my_obj):
