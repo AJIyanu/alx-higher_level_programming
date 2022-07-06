@@ -7,7 +7,7 @@ this is jason module
 this is jason module
 """
 
-jason = __import__('json')
+json = __import__('json')
 
 
 def to_json_string(my_obj):
@@ -16,4 +16,4 @@ def to_json_string(my_obj):
     we convert to string
     we convert to  string
     """
-    return (jason.dump(my_obj))
+    return (json.dumps(my_obj))
