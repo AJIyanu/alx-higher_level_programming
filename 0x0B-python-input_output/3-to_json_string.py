@@ -7,7 +7,7 @@ this is jason module
 this is jason module
 """
 
-jason = __import__('jason')
+jason = __import__('json')
 
 
 def to_json_string(my_obj):
