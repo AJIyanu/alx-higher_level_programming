@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+!/usr/bin/python3
 """
 This is whatvi do with my night
 I believe it pays off for me
