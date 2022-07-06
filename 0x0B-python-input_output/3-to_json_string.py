@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+__import__('jason')
 """
 This module deals with jason
 This is jason module
