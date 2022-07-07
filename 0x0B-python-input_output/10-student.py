@@ -29,7 +29,6 @@ class Student:
         for i in range(len(attrs)):
             if attrs[i] in all_dict:
                 key = attrs[i]
-                key_value = {key:all_dict[key]}
+                key_value = {key: all_dict[key]}
                 f_dict.update(key_value)
         return (f_dict)
-
