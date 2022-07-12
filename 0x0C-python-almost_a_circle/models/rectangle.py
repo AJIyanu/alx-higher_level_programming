@@ -1,34 +1,79 @@
 #!/usr/bin/python3
+
+
 """
-This is a Rectangle modeule
-It will inherit the base module for id
-It will also have its own methods and stuffs
-Let us make this
-Five lines
+This module describes a rectangle and all its properties
+stay tuned for developments
 """
 
 
-Base = __import__("base").Base
-
-
-class Rectangle(Base):
+class Rectangle:
     """
-    Rectangle class with initializer
-    Then we add more lines here
-    and here also
-    and here also
-    and here also
+    This is the class rectangle that I told you about
     """
 
-    def __init__(self, width, height, x=0, y=0, id=None):
+    def __init__(self, width=0, height=0):
         """
-        This initializer inherits the super class
-        This too should probably increase
-        to thiz too
-        and here too
+        This is the initializer for the rectangle property
+        we are taking the width and the height
         """
-        super().__init__
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        if type(width) is not int:
+            raise TypeError("width must be an integer")
+        if width < 0:
+            raise ValueError("width must be >= 0")
+        self._Rectangle__width = width
+        if type(height) is not int:
+            raise TypeError("height must be an integer")
+        if height < 0:
+            raise ValueError("height must be >= 0")
+        self._Rectangle__height = height
+
+    @property
+    def width(self):
+        """
+        retrieve the width of rectangle
+        """
+        return (self._Rectangle__width)
+
+    @width.setter
+    def width(self, value):
+        """
+        This is where we give a new width
+        """
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
+        self._Rectangle__width = value
+
+    @property
+    def height(self):
+        """
+        This property is to retrive the height
+        """
+        return (self._Rectangle__height)
+
+    @height.setter
+    def height(self, value):
+        """
+        Now we need a new height
+        """
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self._Rectangle__height = value
+
+    def area(self):
+        """
+        Returns the area of the rectangle
+        """
+        return (self._Rectangle__width * self._Rectangle__height)
+
+    def perimeter(self):
+        """
+        Returns thr perimeter of the rectangle
+        """
+        if self._Rectangle__width == 0 or self._Rectangle__height == 0:
+            return (0)
+        return (2 * (self._Rectangle__width + self._Rectangle__height))
