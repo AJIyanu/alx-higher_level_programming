@@ -6,7 +6,7 @@ It will also have its own methods and stuffs
 """
 
 
-from model.base import Base
+from base import Base
 
 
 class Rectangle(Base):
