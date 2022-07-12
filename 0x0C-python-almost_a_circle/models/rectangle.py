@@ -8,7 +8,7 @@ Five lines
 """
 
 
-from base import Base
+Base = __import__("base").Base
 
 
 class Rectangle(Base):
