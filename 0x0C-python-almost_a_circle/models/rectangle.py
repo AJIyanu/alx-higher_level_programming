@@ -7,16 +7,20 @@ stay tuned for developments
 """
 
 
-class Rectangle:
+from models import base
+
+
+class Rectangle(Base):
     """
     This is the class rectangle that I told you about
     """
 
-    def __init__(self, width=0, height=0):
+    def __init__(self, width, height, x=0, y=0, id=None):
         """
         This is the initializer for the rectangle property
         we are taking the width and the height
         """
+        super().__init__(id=None)
         if type(width) is not int:
             raise TypeError("width must be an integer")
         if width < 0:
