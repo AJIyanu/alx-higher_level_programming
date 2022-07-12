@@ -23,3 +23,23 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    def validator(Name, value):
+        """
+        This is to save me lots of typing stress
+        This validates all data inputed
+        """
+        if type(value) is not int:
+            raise TypeError(Name + " must be an integer")
+        if value < 1:
+            raise ValueError(Name + " must be > 0")
+
+    def validatepos(Name, value):
+        """
+        This one validates the position adjuster
+        We need an integer not more less than zero"
+        """
+        if type(value):
+            raise TypeError(Name + " must be an integer")
+        if value < 0:
+            raise ValueError(Name + " must be >= 0")

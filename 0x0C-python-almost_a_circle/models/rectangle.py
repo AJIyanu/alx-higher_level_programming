@@ -21,63 +21,55 @@ class Rectangle(Base):
         we are taking the width and the height
         """
         super().__init__(id=None)
-        if type(width) is not int:
-            raise TypeError("width must be an integer")
-        if width < 0:
-            raise ValueError("width must be >= 0")
-        self._Rectangle__width = width
-        if type(height) is not int:
-            raise TypeError("height must be an integer")
-        if height < 0:
-            raise ValueError("height must be >= 0")
-        self._Rectangle__height = height
+        Base.validator("width", width)
+        Base.validator("height", height)
+        Base.validatepos("x", x)
+        Base.validatepos("y", y)
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
 
     @property
     def width(self):
         """
         retrieve the width of rectangle
         """
-        return (self._Rectangle__width)
+        return (self.__width)
 
     @width.setter
     def width(self, value):
         """
         This is where we give a new width
         """
-        if type(value) is not int:
-            raise TypeError("width must be an integer")
-        if value < 0:
-            raise ValueError("width must be >= 0")
-        self._Rectangle__width = value
+        Base.validator("width", width)
+        self.__width = value
 
     @property
     def height(self):
         """
         This property is to retrive the height
         """
-        return (self._Rectangle__height)
+        return (self.__height)
 
     @height.setter
     def height(self, value):
         """
         Now we need a new height
         """
-        if type(value) is not int:
-            raise TypeError("height must be an integer")
-        if value < 0:
-            raise ValueError("height must be >= 0")
-        self._Rectangle__height = value
+        Base.validator("height", height)
+        self.__height = value
 
     def area(self):
         """
         Returns the area of the rectangle
         """
-        return (self._Rectangle__width * self._Rectangle__height)
+        return (self.__width * self.__height)
 
     def perimeter(self):
         """
         Returns thr perimeter of the rectangle
         """
-        if self._Rectangle__width == 0 or self._Rectangle__height == 0:
+        if self.__width == 0 or self.__height == 0:
             return (0)
-        return (2 * (self._Rectangle__width + self._Rectangle__height))
+        return (2 * (self.__width + self.__height))
