@@ -7,7 +7,9 @@ stay tuned for developments
 """
 
 
-Base = __import__("base.py").Base
+import sys
+sys.path.append('models')
+Base = __import__("base").Base
 
 
 class Rectangle(Base):

@@ -39,7 +39,7 @@ class Base:
         This one validates the position adjuster
         We need an integer not more less than zero"
         """
-        if type(value):
+        if type(value) is not int:
             raise TypeError(Name + " must be an integer")
         if value < 0:
             raise ValueError(Name + " must be >= 0")
