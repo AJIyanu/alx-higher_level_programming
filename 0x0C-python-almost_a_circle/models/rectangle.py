@@ -7,7 +7,7 @@ stay tuned for developments
 """
 
 
-from models import base
+Base = __import__("base.py").Base
 
 
 class Rectangle(Base):
