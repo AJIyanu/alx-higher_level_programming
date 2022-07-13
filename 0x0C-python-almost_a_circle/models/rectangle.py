@@ -17,7 +17,6 @@ class Rectangle(Base):
     This is the class rectangle that I told you about
     """
 
-
     def __init__(self, width, height, x=0, y=0, id=None):
         """
         This is the initializer for the rectangle property
@@ -118,5 +117,5 @@ class Rectangle(Base):
                 print(" ", end='')
             for column in range(width):
                 print("#", end='')
-            if row != height -1:
+            if row != height - 1:
                 print()
