@@ -110,12 +110,11 @@ class Rectangle(Base):
         """
         displays rectangle with #
         """
-        for ver in range(y):
+        for ver in range(self.__y):
             print()
-        for row in range(height):
-            for horizon in range(x):
+        for row in range(self.__height):
+            for horizon in range(self.__x):
                 print(" ", end='')
-            for column in range(width):
+            for column in range(self.__width):
                 print("#", end='')
-            if row != height - 1:
-                print()
+            print()
