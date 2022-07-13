@@ -62,6 +62,36 @@ class Rectangle(Base):
         Base.validator("height", height)
         self.__height = value
 
+    @property
+    def x(self):
+        """
+        This returns x value
+        """
+        return (self.__x)
+
+    @x.setter
+    def x(self, value):
+        """"
+        sets the value of x
+        """
+        Base.validatepos("x", value)
+        self.__x = value
+
+    @property
+    def y(self):
+        """
+        gets the value of y -vertical
+        """
+        return (self.__y)
+
+    @y.setter
+    def y(self, value):
+        """
+        sets the value of y
+        """
+        Base.validatepos("y", value)
+        self.__y = value
+
     def area(self):
         """
         Returns the area of the rectangle
