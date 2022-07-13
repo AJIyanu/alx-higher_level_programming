@@ -123,5 +123,9 @@ class Rectangle(Base):
         """
         Overider represent of string
         """
-        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,\
-self.__y, self.__width, self.__height))
+        tt = self.id
+        ty = self.__x
+        tr = self.__y
+        te = self.__width
+        th = self.__height
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(tt, ty, tr, te, th))
