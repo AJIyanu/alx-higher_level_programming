@@ -118,3 +118,10 @@ class Rectangle(Base):
             for column in range(self.__width):
                 print("#", end='')
             print()
+
+    def __repr__(self):
+        """
+        Overider represent of string
+        """
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,\
+self.__y, self.__width, self.__height))
