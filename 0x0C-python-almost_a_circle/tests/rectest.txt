@@ -9,9 +9,15 @@ It is also assumed that only integer is fed into id so this is not tested
 >>> Rec = Rectangle(1, 2, 3, 4)
 >>> print(Rec.area())
 2
->>> b2 = Base(12)
->>> print(b2.id)
+>>> print(Rec.id)
+1
+>>> Rec2 = Rectangle(1, 6, 9, 4, 12)
+>>> print(Rec2.id)
 12
->>> b3 = Base()
->>> print(b3.id)
+>>> print(Rec2.area())
+6
+>>> Rec3 = Rectangle(6, 5)
+>>> print(Rec.area())
+30
+>>> print(Rec.id)
 2

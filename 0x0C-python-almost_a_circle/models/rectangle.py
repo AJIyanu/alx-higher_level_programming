@@ -17,12 +17,13 @@ class Rectangle(Base):
     This is the class rectangle that I told you about
     """
 
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """
         This is the initializer for the rectangle property
         we are taking the width and the height
         """
-        super().__init__(id=None)
+        super().__init__(id)
         Base.validator("width", width)
         Base.validator("height", height)
         Base.validatepos("x", x)
@@ -105,3 +106,17 @@ class Rectangle(Base):
         if self.__width == 0 or self.__height == 0:
             return (0)
         return (2 * (self.__width + self.__height))
+
+    def display(self):
+        """
+        displays rectangle with #
+        """
+        for ver in range(y):
+            print()
+        for row in range(height):
+            for horizon in range(x):
+                print(" ", end='')
+            for column in range(width):
+                print("#", end='')
+            if row != height -1:
+                print()
