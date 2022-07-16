@@ -7,8 +7,11 @@ stay tuned for developments
 """
 
 
-import models.base as base
-class Rectangle(base.Base):
+import sys
+sys.path.append('models')
+Base = __import__("base").Base
+
+class Rectangle(Base):
     """
     This is the class rectangle that I told you about
     """
@@ -40,7 +43,7 @@ class Rectangle(base.Base):
         """
         This is where we give a new width
         """
-        Base.validator("width", width)
+        Base.validator("width", value)
         self.__width = value
 
     @property
