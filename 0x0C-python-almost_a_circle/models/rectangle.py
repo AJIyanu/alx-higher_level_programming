@@ -129,3 +129,14 @@ class Rectangle(Base):
         te = self.__width
         th = self.__height
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(tt, ty, tr, te, th))
+
+    def update(self, *args):
+        super().__init__(args[0])
+        if len(args) > 1:
+            self.width = args[1]
+        if len(args) > 2:
+            self.height = args[2]
+        if len(args) > 3:
+            self.x = args[3]
+        if len(args) > 4:
+            self.y = args[4]
