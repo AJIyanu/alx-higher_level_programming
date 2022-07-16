@@ -7,12 +7,8 @@ stay tuned for developments
 """
 
 
-import sys
-sys.path.append('models')
-Base = __import__("base").Base
-
-
-class Rectangle(Base):
+import models.base as base
+class Rectangle(base.Base):
     """
     This is the class rectangle that I told you about
     """

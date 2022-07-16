@@ -1,20 +1,26 @@
 #!/usr/bin/python3
-""" 6-main """
-from models.rectangle import Rectangle
+""" Check """
+import inspect
 
-if __name__ == "__main__":
+rectangle_import = __import__('models.rectangle').rectangle
 
-    r1 = Rectangle(2, 3, 2, 2)
-    r1.display()
+if rectangle_import is None:
+    print("Can't import models.rectangle")
+    exit(1)
 
-    print("---")
+rectangle_class = rectangle_import.__dict__.get('Rectangle')
+if rectangle_class is None:
+    print("Can't find class Rectangle in models.rectangle")
+    exit(1)
 
-    r2 = Rectangle(3, 2, 1, 0)
-    r2.display()
+if not inspect.isclass(rectangle_class):
+    print("Rectangle is not a class")
+    exit(1)
 
+from models.base import Base 
 
-    r1 = Rectangle(4, 6, 2, 1, 12)
-    print(r1)
+if not issubclass(rectangle_class, Base):
+    print("Rectangle is not a subclass of Base")
+    exit(1)
 
-    r2 = Rectangle(5, 5, 1)
-    print(r2)
+print("OK", end="")

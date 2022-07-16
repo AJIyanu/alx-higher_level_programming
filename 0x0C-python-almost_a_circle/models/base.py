@@ -6,7 +6,7 @@ amd also classes
 """
 
 
-class Base:
+class Base(object):
     """
     all classes is based om this class for this project...
     """
