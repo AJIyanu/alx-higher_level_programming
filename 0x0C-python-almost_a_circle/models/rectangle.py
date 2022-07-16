@@ -131,6 +131,9 @@ class Rectangle(Base):
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(tt, ty, tr, te, th))
 
     def update(self, *args):
+        """
+        Will you believe i forgot to document this shit sha
+        """
         super().__init__(args[0])
         if len(args) > 1:
             self.width = args[1]
