@@ -11,6 +11,7 @@ import sys
 sys.path.append('models')
 Base = __import__("base").Base
 
+
 class Rectangle(Base):
     """
     This is the class rectangle that I told you about
@@ -58,7 +59,7 @@ class Rectangle(Base):
         """
         Now we need a new height
         """
-        Base.validator("height", height)
+        Base.validator("height", value)
         self.__height = value
 
     @property

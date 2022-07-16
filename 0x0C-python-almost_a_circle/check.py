@@ -4,54 +4,36 @@ from models.rectangle import Rectangle
 
 r = Rectangle(10, 12)
 
-try:    
-    r.width = "12"
-    print("TypeError exception not raised")
+try:
+    r.height = -12
+    print("ValueError exception not raised")
     exit(1)
-except TypeError as e:
-    if str(e) != "width must be an integer":
+except ValueError as e:
+    if str(e) != "height must be > 0":
         print("Wrong exception message: {}".format(e))
         exit(1)
 except Exception as e:
     print("Wrong exception: [{}] {}".format(type(e), e))
     exit(1)
 
-print("1")
-
 try:
-    r.width = [13]
-    print("TypeError exception not raised")
+    r.height = -89
+    print("ValueError exception not raised")
     exit(1)
-except TypeError as e:
-    if str(e) != "width must be an integer":
+except ValueError as e:
+    if str(e) != "height must be > 0":
         print("Wrong exception message: {}".format(e))
         exit(1)
 except Exception as e:
     print("Wrong exception: [{}] {}".format(type(e), e))
     exit(1)
 
-print("2")
-
 try:
-    r.width = 13.12
-    print("TypeError exception not raised")
+    r.height = 0
+    print("ValueError exception not raised")
     exit(1)
-except TypeError as e:
-    if str(e) != "width must be an integer":
-        print("Wrong exception message: {}".format(e))
-        exit(1)
-except Exception as e:
-    print("Wrong exception: [{}] {}".format(type(e), e))
-    exit(1)
-
-print("3")
-
-try:
-    r.width = { 'id': 12 }
-    print("TypeError exception not raised")
-    exit(1)
-except TypeError as e:
-    if str(e) != "width must be an integer":
+except ValueError as e:
+    if str(e) != "height must be > 0":
         print("Wrong exception message: {}".format(e))
         exit(1)
 except Exception as e:
