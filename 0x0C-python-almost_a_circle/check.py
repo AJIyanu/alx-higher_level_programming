@@ -1,16 +1,21 @@
 #!/usr/bin/python3
 """ Check """
-
-import inspect
 from models.rectangle import Rectangle
 
-update_fct = Rectangle.__dict__.get("update")
-if update_fct is None:
-    print("Rectangle doesn't have method update")
-    exit(1)
+if __name__ == "__main__":
 
-if not inspect.isfunction(update_fct):
-    print("update is not a function")
-    exit(1)
+    r1 = Rectangle(10, 10, 10, 10)
+    print(r1)
+    print('__-_-_-_-_-_-_-_-_')
 
-print("OK", end="")
+    r1.update(height=1)
+    print(r1)
+
+    r1.update(width=1, x=2)
+    print(r1)
+
+    r1.update(y=1, width=2, x=3, id=89)
+    print(r1)
+
+    r1.update(x=1, height=2, y=3, width=4)
+    print(r1)
