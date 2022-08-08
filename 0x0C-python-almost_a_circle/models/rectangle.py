@@ -130,7 +130,7 @@ class Rectangle(Base):
         th = self.__height
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(tt, ty, tr, te, th))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         Will you believe i forgot to document this shit sha
         """
@@ -143,3 +143,9 @@ class Rectangle(Base):
             self.x = args[3]
         if len(args) > 4:
             self.y = args[4]
+        if kwargs:
+            if kwargs['width']:
+                self.width = kwargs.get('width')
+                self.height = kwargs.get('height')
+                self.x = kwargs.get('x')
+                self.y = kwargs.get('y')
