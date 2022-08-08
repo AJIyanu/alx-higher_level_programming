@@ -144,8 +144,8 @@ class Rectangle(Base):
         if len(args) > 4:
             self.y = args[4]
         if kwargs:
-            if kwargs['width']:
-                self.width = kwargs.get('width')
-                self.height = kwargs.get('height')
-                self.x = kwargs.get('x')
-                self.y = kwargs.get('y')
+            super().__init__(kwargs.get('id'))
+            self.width = kwargs.get('width')
+            self.height = kwargs.get('height')
+            self.x = kwargs.get('x')
+            self.y = kwargs.get('y')
