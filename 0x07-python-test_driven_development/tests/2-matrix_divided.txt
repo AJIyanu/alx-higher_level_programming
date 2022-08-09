@@ -1,0 +1,13 @@
+We want to test our matrix divider
+Fisrt se import, then we do series of checks
+Then we test
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>> mymatrix = [[3, -3, 3], [-3, 3, 3]]
+>>> new = matrix_divided(mymatrix, 4)
+>>> print(new)
+[[0.75, -0.75, 0.75], [-0.75, 0.75, 0.75]]
+>>> new = matrix_divided(mymatrix, 3)
+>>> print(new)
+[[1, -1, 1], [-1, 1, 1]]
+>>> 
