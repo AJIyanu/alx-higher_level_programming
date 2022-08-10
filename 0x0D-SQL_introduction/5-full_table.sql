@@ -1,4 +1,4 @@
 -- This is a comment
 -- Describe a table with show status
 
-SHOW TABLE STATUS first_table;
+DESC first_table;
