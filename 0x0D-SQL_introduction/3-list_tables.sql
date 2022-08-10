@@ -1,4 +1,4 @@
 -- This is a comment
 -- I want to list all tables present in the database
 
-SHOW FULL TABLES;
+SHOW TABLES;
