@@ -1,4 +1,4 @@
 -- This is a comment
 --  ID cannor be empty
 
-CREATE TABLE IF NOT EXISTS (id INT DEFAULT 1, name VARCHAR(256));
+CREATE TABLE IF NOT EXISTS id_not_null (id INT DEFAULT 1, name VARCHAR(256));
