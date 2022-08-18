@@ -9,7 +9,7 @@ stay tuned for developments
 
 import sys
 sys.path.append('models')
-Base = __import__("base").Base
+from .base import Base
 
 
 class Rectangle(Base):

@@ -4,7 +4,7 @@ This is a square module
 It is a lot easier to program with vscode
 """
 
-from square import Square
+from .rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -17,15 +17,14 @@ class Square(Rectangle):
         Ghis is the constructor here...
         nothing special just using super class
         """
-        super().__init__(size, size, x, y, id)
+        super(Square, self).__init__(size, size, x, y, id)
 
     def __repr__(self):
         """
         Overider represent of string
         """
         tt = self.id
-        ty = self.__x
-        tr = self.__y
-        te = self.__width
-        th = self.__height
-        return ("[Rectangle] ({}) {}/{} - {}".format(tt, ty, tr, te))
+        ty = super().x
+        tr = super().y
+        te = super().width
+        return ("[Square] ({}) {}/{} - {}".format(tt, ty, tr, te))
