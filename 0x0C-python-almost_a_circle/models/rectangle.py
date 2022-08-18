@@ -134,7 +134,8 @@ class Rectangle(Base):
         """
         Will you believe i forgot to document this shit sha
         """
-        super().__init__(args[0])
+        if len(args) >= 1:
+            super().__init__(args[0])
         if len(args) > 1:
             self.width = args[1]
         if len(args) > 2:
@@ -144,8 +145,13 @@ class Rectangle(Base):
         if len(args) > 4:
             self.y = args[4]
         if kwargs:
-            super().__init__(kwargs.get('id'))
-            self.width = kwargs.get('width')
-            self.height = kwargs.get('height')
-            self.x = kwargs.get('x')
-            self.y = kwargs.get('y')
+            if 'id' in kwargs:
+                super().__init__(kwargs['id'])
+            if 'width' in kwargs:
+                self.width = kwargs['width']
+            if 'height' in kwargs:
+                self.height = kwargs['height']
+            if 'x' in kwargs:
+                self.x = kwargs['x']
+            if 'y' in kwargs:
+                self.y = kwargs['y']
