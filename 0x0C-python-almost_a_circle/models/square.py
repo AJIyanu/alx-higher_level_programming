@@ -6,7 +6,6 @@ I am just going to increase comment
 """
 
 from .rectangle import Rectangle
-from .base import Base
 
 
 class Square(Rectangle):
@@ -49,9 +48,9 @@ class Square(Rectangle):
         """
         This is where we give a new width
         """
-        super().validator("width", value)
-        super().width = value
-        super().height = value
+        super().validator(value)
+        Rectangle.width = value
+        Rectangle.height = value
 
     @property
     def x(self):
