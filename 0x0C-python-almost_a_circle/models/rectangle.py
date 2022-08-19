@@ -7,8 +7,6 @@ stay tuned for developments
 """
 
 
-import sys
-sys.path.append('models')
 from .base import Base
 
 
