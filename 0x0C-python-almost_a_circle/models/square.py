@@ -48,7 +48,7 @@ class Square(Rectangle):
         """
         This is where we give a new width
         """
-        super().validator(value)
+        Rectangle.validator("width", value)
         Rectangle.width = value
         Rectangle.height = value
 
