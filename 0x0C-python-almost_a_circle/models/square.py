@@ -81,3 +81,27 @@ class Square(Rectangle):
         """
         super().validatepos("y", value)
         super().y = value
+
+    def update(self, *args, **kwargs):
+        """
+        Will you believe i forgot to document this shit sha
+        """
+        if len(args) >= 1:
+            self.id = args[0]
+        if len(args) > 1:
+            Rectangle.width = args[1]
+            Rectangle.height = args[1]
+        if len(args) > 2:
+            Rectangle.x = args[2]
+        if len(args) > 3:
+            Rectangle.y = args[3]
+        if kwargs:
+            if 'id' in kwargs:
+                self.id = kwargs['id']
+            if 'size' in kwargs:
+                Rectangle.width = kwargs['size']
+                Rectangle.height = kwargs['size']
+            if 'x' in kwargs:
+                Rectangle.x = kwargs['x']
+            if 'y' in kwargs:
+                Rectangle.y = kwargs['y']
