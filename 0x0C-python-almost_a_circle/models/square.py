@@ -38,61 +38,47 @@ class Square(Rectangle):
         return ("[Square] ({}) {}/{} - {}".format(tt, ty, tr, te))
 
     @property
-    def width(self):
+    def size(self):
         """
         retrieve the width of rectangle
         """
         return (super().width)
 
-    @width.setter
-    def width(self, value):
+    @size.setter
+    def size(self, value):
         """
         This is where we give a new width
         """
         super().validator("width", value)
-        super().__width = value
-
-    @property
-    def height(self):
-        """
-        This property is to retrive the height
-        """
-        return (self.__height)
-
-    @height.setter
-    def height(self, value):
-        """
-        Now we need a new height
-        """
-        Base.validator("height", value)
-        self.__height = value
+        super().width = value
+        super().height = value
 
     @property
     def x(self):
         """
         This returns x value
         """
-        return (self.__x)
+        return (super().x)
 
     @x.setter
     def x(self, value):
         """"
         sets the value of x
         """
-        Base.validatepos("x", value)
-        self.__x = value
+        super().validatepos("x", value)
+        super().x = value
 
     @property
     def y(self):
         """
         gets the value of y -vertical
         """
-        return (self.__y)
+        return (super().y)
 
     @y.setter
     def y(self, value):
         """
         sets the value of y
         """
-        Base.validatepos("y", value)
-        self.__y = value
+        super().validatepos("y", value)
+        super().y = value
