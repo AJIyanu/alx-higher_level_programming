@@ -7,6 +7,7 @@ stay tuned for developments
 """
 
 
+from turtle import width
 from .base import Base
 
 
@@ -153,3 +154,14 @@ class Rectangle(Base):
                 self.x = kwargs['x']
             if 'y' in kwargs:
                 self.y = kwargs['y']
+
+    def to_dictionary(self):
+        """
+        Return a dictionary representation
+        """
+        dict = self.__dict__
+        dict['width'] = dict.pop('_Rectangle__width')
+        dict['height'] = dict.pop('_Rectangle__height')
+        dict['x'] = dict.pop('_Rectangle__x')
+        dict['y'] = dict.pop('_Rectangle__y')
+        return (dict)
