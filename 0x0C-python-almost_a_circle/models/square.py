@@ -105,3 +105,14 @@ class Square(Rectangle):
                 Rectangle.x = kwargs['x']
             if 'y' in kwargs:
                 Rectangle.y = kwargs['y']
+
+    def to_dictionary(self):
+        """
+        square to dictionary
+        """
+        dict = self.__dict__
+        dict['size'] = dict.pop('_Rectangle__width')
+        dict.pop('_Rectangle__height')
+        dict['x'] = dict.pop('_Rectangle__x')
+        dict['y'] = dict.pop('_Rectangle__y')
+        return (dict)
