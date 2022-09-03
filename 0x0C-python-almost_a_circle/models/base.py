@@ -6,6 +6,9 @@ amd also classes
 """
 
 
+import json
+
+
 class Base(object):
     """
     all classes is based om this class for this project...
@@ -43,3 +46,17 @@ class Base(object):
             raise TypeError(Name + " must be an integer")
         if value < 0:
             raise ValueError(Name + " must be >= 0")
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        jstr = "["
+        if list_dictionaries is None:
+            jstr += "]"
+            return (jstr)
+        if len(list_dictionaries) == 0:
+            jstr += "]"
+            return (jstr)
+        for dic in list_dictionaries:
+            jstr += json.dumps(dic)
+        jstr += "]"
+        return (jstr)
