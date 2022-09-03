@@ -56,7 +56,5 @@ class Base(object):
         if len(list_dictionaries) == 0:
             jstr += "]"
             return (jstr)
-        for dic in list_dictionaries:
-            jstr += json.dumps(dic)
-        jstr += "]"
+        jstr = json.dumps(list_dictionaries)
         return (jstr)
