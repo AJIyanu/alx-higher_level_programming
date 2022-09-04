@@ -58,3 +58,23 @@ class Base(object):
             return (jstr)
         jstr = json.dumps(list_dictionaries)
         return (jstr)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """
+        Ready to convert object to file now
+        """
+        list_obj = []
+        if list_objs is None:
+            pass
+        else:
+            for inst in list_objs:
+                list_obj.append(inst.to_dictionary())
+        if list_objs:
+            filepath = inst.__class__.__name__
+            filepath += ".json"
+        else:
+            filepath = "Base.json"
+        jsonstr = cls.to_json_string(list_obj)
+        with open(filepath, "w") as file:
+            file.write(jsonstr)
