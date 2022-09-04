@@ -113,8 +113,8 @@ class Square(Rectangle):
         dict = self.__dict__
         dict = {
                     "id": self.id,
-                    "size": self.__width,
-                    "x": self.__x,
-                    "y": self.__y
-                }
+                    "size": super().width,
+                    "x": super().x,
+                    "y": super().y
+        }
         return (dict)
