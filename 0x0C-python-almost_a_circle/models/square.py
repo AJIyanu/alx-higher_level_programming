@@ -111,8 +111,10 @@ class Square(Rectangle):
         square to dictionary
         """
         dict = self.__dict__
-        dict['size'] = dict.pop('_Rectangle__width')
-        dict.pop('_Rectangle__height')
-        dict['x'] = dict.pop('_Rectangle__x')
-        dict['y'] = dict.pop('_Rectangle__y')
+        dict = {
+                    "id": self.id,
+                    "size": self.__width,
+                    "x": self.__x,
+                    "y": self.__y
+                }
         return (dict)

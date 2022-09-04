@@ -159,9 +159,11 @@ class Rectangle(Base):
         """
         Return a dictionary representation
         """
-        dict = self.__dict__
-        dict['width'] = dict.pop('_Rectangle__width')
-        dict['height'] = dict.pop('_Rectangle__height')
-        dict['x'] = dict.pop('_Rectangle__x')
-        dict['y'] = dict.pop('_Rectangle__y')
+        dict = {
+                    "id": self.id,
+                    "width": self.__width,
+                    "height": self.__height,
+                    "x": self.__x,
+                    "y": self.__y
+                }
         return (dict)
