@@ -70,11 +70,8 @@ class Base(object):
         else:
             for inst in list_objs:
                 list_obj.append(inst.to_dictionary())
-        if list_objs:
-            filepath = inst.__class__.__name__
-            filepath += ".json"
-        else:
-            filepath = "Base.json"
+        filepath = cls.__name__
+        filepath += ".json"
         jsonstr = cls.to_json_string(list_obj)
         with open(filepath, "w") as file:
             file.write(jsonstr)
