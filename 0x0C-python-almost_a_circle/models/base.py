@@ -75,3 +75,16 @@ class Base(object):
         jsonstr = cls.to_json_string(list_obj)
         with open(filepath, "w") as file:
             file.write(jsonstr)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        Converts a string represeting a list of dictionaries
+        to a real list
+        """
+        list = []
+        if json_string is None:
+            pass
+        else:
+            list = json.loads(json_string)
+        return (list)
