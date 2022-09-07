@@ -9,6 +9,9 @@ function secondlarge (l, array) {
   let large = array[2];
   let lar;
   for (let start = 3; start < l; start++) {
+    if (isNaN(large)) {
+      large = lar;
+    }
     if (array[start] > large) {
       lar = large;
       large = array[start];
