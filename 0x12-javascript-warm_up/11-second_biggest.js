@@ -1,4 +1,4 @@
-#!/usr/bin/node 
+#!/usr/bin/node
 
 const arg = process.argv;
 const len = arg.length;
