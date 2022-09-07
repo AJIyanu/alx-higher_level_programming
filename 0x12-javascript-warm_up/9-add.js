@@ -6,6 +6,4 @@ const int2 = parseInt(arg[3]);
 function add (a, b) {
   return (a + b);
 }
-if (!isNaN(int1) && (!isNaN(int2))) {
-  console.log(add(int1, int2));
-}
+console.log(add(int1, int2));
