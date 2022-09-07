@@ -1,9 +1,8 @@
 #!/usr/bin/node
 
-
 class Rectangle {
-  constructor() {
+  constructor () {
   }
 }
 
-const r1 = new Rectangle() 
+const r1 = new Rectangle();
