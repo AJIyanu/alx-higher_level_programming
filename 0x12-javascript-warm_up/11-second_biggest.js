@@ -6,17 +6,12 @@ function secondlarge (l, array) {
   if (l < 4) {
     return (0);
   }
-  let large = array[2];
-  let lar;
-  for (let start = 3; start < l; start++) {
-    if (isNaN(large)) {
-      large = lar;
-    }
-    if (array[start] > large) {
-      lar = large;
-      large = array[start];
-    }
-  }
-  return (lar);
+  array.splice(0, 2);
+  const num = Math.max(...array);
+  const strint = num.toString();
+  let large = array.indexOf(strint);
+  array.splice(large, 1);
+  large = Math.max(...array);
+  return (large);
 }
 console.log(secondlarge(len, arg));
