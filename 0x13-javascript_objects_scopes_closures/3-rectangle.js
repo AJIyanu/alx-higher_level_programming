@@ -11,7 +11,7 @@ class Rectangle {
   print () {
     let col = 'X';
     for (let start = 1; start < this.width; start++) {
-      col += 'x';
+      col += 'X';
     }
     for (let row = 0; row < this.height; row++) {
       console.log(col);
