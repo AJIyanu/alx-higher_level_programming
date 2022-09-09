@@ -9,7 +9,7 @@ class Rectangle {
   }
 
   print () {
-    let col = 'x';
+    let col = 'X';
     for (let start = 1; start < this.width; start++) {
       col += 'x';
     }
