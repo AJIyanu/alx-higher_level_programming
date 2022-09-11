@@ -7,5 +7,5 @@ exports.logMe = function (item) {
     count += 1;
   }
 
-  dispcount(item);
+  return (dispcount(item));
 };
