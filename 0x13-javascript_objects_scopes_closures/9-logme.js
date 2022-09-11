@@ -2,10 +2,10 @@
 
 exports.logMe = function (item) {
   let count = 0;
-  function dispcount (item) {
-    console.log(count + ' : ' + item);
+  function dispcount (itemm) {
+    console.log(count + ' : ' + itemm);
     count += 1;
   }
 
-  dispcount();
+  dispcount(item);
 };
