@@ -1,8 +1,7 @@
 #!/usr/bin/python3 
  """ 
- This module is the contains a class 
- the class is the base of all modules 
- amd also classes 
+ This module lists all state from database
+ documennted right? 
  """ 
   
  
