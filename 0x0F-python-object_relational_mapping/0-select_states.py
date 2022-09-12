@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """
 This is a database python module
-more documentation added
-and more again
-and more
-and more more
+This module aims at selectimg all states id
+in a table and retrievimg them as a listbof tuple
+the tupld is in ascendimg order
+ORzm dpimg great job
 """
 
 import MySQLdb
