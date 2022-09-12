@@ -13,7 +13,7 @@ if __name__ == "__main__":
                 )
         c = db_connection.cursor()
         c.execute("SELECT * FROM states WHERE name like 'N%' \
-			ORDER  BY id ASC;")
+ORDER  BY id ASC;")
         results = c.fetchall()
         for result in results:
             print(result)

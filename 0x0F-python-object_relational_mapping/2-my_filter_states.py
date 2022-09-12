@@ -13,7 +13,7 @@ if __name__ == "__main__":
                 )
         c = db_connection.cursor()
         c.execute("SELECT * FROM states WHERE name like '{}' \
-			ORDER  BY id ASC;".format(sys.argv[4]))
+ORDER  BY id ASC;".format(sys.argv[4]))
         results = c.fetchall()
         for result in results:
             print(result)
