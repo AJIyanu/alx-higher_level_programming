@@ -12,7 +12,8 @@ if __name__ == "__main__":
                 user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3]
                 )
         c = db_connection.cursor()
-        c.execute("SELECT c.id, c.name, s.name FROM cities as c INNER JOIN states as s ON c.state_id = s.id ORDER  BY c.id;")
+        c.execute("SELECT c.id, c.name, s.name FROM cities as c\
+INNER JOIN states as s ON c.state_id = s.id ORDER  BY c.id;")
         results = c.fetchall()
         for result in results:
             print(result)
