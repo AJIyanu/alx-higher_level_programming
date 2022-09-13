@@ -16,8 +16,7 @@ if __name__ == "__main__":
                 )
         c = db_connection.cursor()
         c.execute("SELECT c.name FROM cities as c \
-INNER JOIN states as s ON c.state_id = s.id WHERE s.id \
-LIKE '{}' ORDER  BY c.id;".format(safe_name))
+INNER JOIN states as s ON c.state_id = s.id WHERE s.id LIKE '{}' ORDER  BY c.id;".format(safe_name))
         results = c.fetchall()
         for result in results:
             print(result)
