@@ -7,6 +7,7 @@ import sys
 
 argn = sys.argv[4]
 safe_name = argn.replace("'", "")
+
 if __name__ == "__main__":
     if len(sys.argv) >= 4:
         db_connection = MySQLdb.connect(
