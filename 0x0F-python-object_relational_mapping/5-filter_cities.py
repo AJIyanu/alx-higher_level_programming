@@ -14,6 +14,8 @@ if __name__ == "__main__":
         c = db_connection.cursor()
         c.execute("SELECT c.name FROM cities as c INNER JOIN states as s ON c.state_id = s.id WHERE s.name LIKE %s ORDER  BY c.id;", (sys.argv[4],))
         results = c.fetchall()
+        res = []
         for result in results:
-            print(result[0])
+            res.append(result[0])
+        print(*res, sep=', ')
         db_connection.close
