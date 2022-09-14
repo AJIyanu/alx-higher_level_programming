@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
-from sqlalchemy import Column, Integer, String
+from sqlalchemy 
 from sqlalchemy.ext.declarative import declarative_base
+from flask import Flask
 
 Base = declarative_base()
 
