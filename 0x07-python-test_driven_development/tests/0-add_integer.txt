@@ -8,26 +8,27 @@ stay tuned...
 
 >>> add_integer = __import__('0-add_integer').add_integer
 
-we have successfully imported the func... now going to test
 
->>> add_integer(1, 2)
-3
+>>> add_integer(10, 20)
+30
 >>> add_integer(3, -2)
 1
 >>> add_integer(2)
 100
+>>> add_integer(-2)
+96
 >>> add_integer(1.0, 2.0)
 3
 >>> try:
-...	add_integer("string")
+...		add_integer("string")
 ... except Exception as e:
-...	print(e)
+...		print(e)
 ...
 a must be an integer
 >>> try:
-...	add_integer(12, "string")
+...		add_integer(12, "string")
 ... except Exception as e:
-...	print(e)
+...		print(e)
 ...
 b must be an integer
 >>> try:
