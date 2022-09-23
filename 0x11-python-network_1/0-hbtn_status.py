@@ -7,6 +7,6 @@ if __name__ == "__main__":
     with urllib.request.urlopen(url) as response:
         html = response.read()
         print("Body response:")
-        print("\t- type: " + str(html))
-        print("\t- content: " + str(type(html)))
+        print("\t- type: " + str(type(html)))
+        print("\t- content: " + str(html))
         print("\t- utf8 content: " + html.decode("utf-8"))
