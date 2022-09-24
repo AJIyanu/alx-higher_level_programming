@@ -2,7 +2,6 @@
 """My Comments come here and must be edited"""
 
 import sys
-from tkinter import N
 import requests
 
 if __name__ == "__main__":
