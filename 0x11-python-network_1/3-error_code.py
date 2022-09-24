@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""My Comments come here and must be edited"""
+"""Exceptions handled and error code printed"""
 
 
 import urllib.request
