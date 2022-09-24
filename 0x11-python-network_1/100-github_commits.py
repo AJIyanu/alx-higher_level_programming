@@ -17,6 +17,6 @@ if __name__ == "__main__":
     for count in range(10):
         dict1 = whldict[count]
         sha = dict1['sha']
-        commit = dict1['commit']
-        author = commit['author']
-        print("{}: {}".format(sha, author['name']))
+       # commit = dict1['commit']
+        author = dict1['author']
+        print("{}: {}".format(sha, author['login']))
