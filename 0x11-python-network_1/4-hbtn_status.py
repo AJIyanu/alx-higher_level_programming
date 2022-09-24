@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Trying to request url with urllib"""
+"""Trying to request url with request"""
 
 import requests
 if __name__ == "__main__":
