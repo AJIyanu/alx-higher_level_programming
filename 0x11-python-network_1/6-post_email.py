@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""My Comments come here and must be edited"""
+"""Using request to send a post request and print"""
 
 
 import requests
