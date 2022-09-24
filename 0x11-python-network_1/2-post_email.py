@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-After an intense search, I came to discover that the
-X-request-Id is found in the .header of opened request
+So what I Basically did here was parse, Post with data
 """
 
 import urllib.request
