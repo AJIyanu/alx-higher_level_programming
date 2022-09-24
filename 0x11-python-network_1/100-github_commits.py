@@ -18,4 +18,5 @@ if __name__ == "__main__":
         dict1 = whldict[count]
         sha = dict1['sha']
         commit = dict1['commit']
-        print("{}: {}".format(sha, commit['message']))
+        author = commit['author']
+        print("{}: {}".format(sha, author['name']))
