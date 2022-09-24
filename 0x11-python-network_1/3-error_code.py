@@ -2,7 +2,8 @@
 """My Comments come here and must be edited"""
 
 
-import urllib.request, urllib.error
+import urllib.request
+import urllib.error
 import sys
 if __name__ == "__main__":
     url = sys.argv[1]
