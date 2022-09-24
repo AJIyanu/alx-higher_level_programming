@@ -12,11 +12,11 @@ if __name__ == "__main__":
               'Accept': 'Accept: application/vnd.github+json'
               }
 
-    login = requests.get(url, headers=headers)
+    login = requests.get(url, headers=headers, params={'per_page': 10})
     whldict = login.json()
-    for count in range(10):
-        dict1 = whldict[count]
+    for count in whldict:
+        dict1 = count
         sha = dict1['sha']
-       # commit = dict1['commit']
-        author = dict1['author']
-        print("{}: {}".format(sha, author['login']))
+        commit = dict1['commit']
+        author = commit['author']
+        print("{}: {}".format(sha, author['name']))
