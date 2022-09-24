@@ -1,3 +1,3 @@
 #!/bin/bash
 # Thiz servea as a comment for all
-curl -s -X METHOD "$1"
+curl -sI "$1" | grep "Allow" | cut -d" " -f2-
