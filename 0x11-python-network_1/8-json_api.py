@@ -5,11 +5,14 @@ import requests
 import sys
 if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
-    if len(sys.arg) > 0:
+    if len(sys.argv) > 0:
         post = {"q": sys.argv[1]}
     else:
         post = {"q": ""}
     reply = requests.post(url, post)
     if reply.json():
         json = reply.json()
-        print("[{}] {}".format(json['id'], json['name']))
+        if len(json) != 0:
+            print("[{}] {}".format(json['id'], json['name']))
+        else:
+            print("No result")
