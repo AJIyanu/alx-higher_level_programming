@@ -2,6 +2,7 @@
 """My Comments come here and must be edited"""
 
 import sys
+from tkinter import N
 import requests
 
 if __name__ == "__main__":
@@ -14,4 +15,4 @@ if __name__ == "__main__":
               }
 
     login = requests.get(url, headers=headers )
-    print(login.json().get('id'))
+    print(login.json().get('id', 'None'))
