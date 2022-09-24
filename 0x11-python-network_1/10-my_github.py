@@ -5,7 +5,7 @@ import sys
 import requests
 
 if __name__ == "__main__":
-    username =  sys.argv[1]
+    username = sys.argv[1]
     patoken = sys.argv[2]
     url = "https://api.github.com/user"
     headers = {
@@ -13,5 +13,5 @@ if __name__ == "__main__":
               'Accept': 'application/vnd.github.v3+json',
               }
 
-    login = requests.get(url, headers=headers )
+    login = requests.get(url, headers=headers)
     print(login.json().get('id', 'None'))
