@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module contains a function that finds the peak of an 
+This module contains a function that finds the peak of an
 unsorted list.
 """
 
