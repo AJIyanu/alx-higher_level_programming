@@ -1,3 +1,3 @@
 #!/bin/bash
 # send json file post
-curl -X $1 -d @$2
+curl -X POST $1 -d @$2
