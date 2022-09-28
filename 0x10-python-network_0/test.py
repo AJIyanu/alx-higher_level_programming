@@ -4,6 +4,12 @@ find_peak = __import__('6-peak').find_peak
 import random
 import time
 
+print(find_peak([1, 2, 4, 6, 3]))
+print(find_peak([4, 2, 1, 2, 3, 1]))
+print(find_peak([2, 2, 2]))
+print(find_peak([]))
+print(find_peak([-2, -4, 2, 1]))
+print(find_peak([4, 2, 1, 2, 2, 2, 3, 1]))
 a = list(range(1, 5000000))
 a1 = list(range(4999999, 1, -1))
 a2 = list(range(1, 5000000))
@@ -24,7 +30,6 @@ for j in range(10):
         if res not in answers:
             print("Wrong answer {}".format(res))
             exit(1)
-        print("found peak a...")
     print(time.time() - timediff)
 
     for i in range(10):
@@ -32,13 +37,10 @@ for j in range(10):
         if res not in answers:
             print("Wrong answer 2 {}".format(res))
             exit(1)
-        print("found peak a2")
     print(time.time() - timediff)
 
     for i in range(10):
-        print("fimdimg random peak.....")
         find_peak(a2)
-        print("a2 foumd....")
     print(time.time() - timediff)
     
     end_time = time.time()
