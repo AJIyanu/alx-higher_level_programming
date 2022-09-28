@@ -7,6 +7,7 @@ unsorted list.
 
 def find_peak(list_of_integers):
     """This function finds the peak of an insorted list"""
+    lst = list_of_integers
     if len(list_of_integers) == 0:
         return (None)
     if len(list_of_integers) == 1:
@@ -15,9 +16,8 @@ def find_peak(list_of_integers):
         return (max(list_of_integers))
     '''if list_of_integers[0] > list_of_integers [1]:
         return (list_of_integers[0])'''
-    if list_of_integers[len(list_of_integers) - 1] > list_of_integers[len(list_of_integers) -2]:
-        return (list_of_integers[len(list_of_integers) -1])
-    lst = list_of_integers
+    if list_of_integers[len(lst) - 1] > list_of_integers[len(lst) - 2]:
+        return (list_of_integers[len(list_of_integers) - 1])
     start = 1
     end = len(lst)
     mid = (end - start) / 2
