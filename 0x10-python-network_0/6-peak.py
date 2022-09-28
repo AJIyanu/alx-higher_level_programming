@@ -5,9 +5,6 @@ unsorted list.
 """
 
 
-import re
-
-
 def find_peak(list_of_integers):
     """This function finds the peak of an insorted list"""
     if len(list_of_integers) == 0:
