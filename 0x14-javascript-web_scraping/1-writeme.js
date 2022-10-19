@@ -6,7 +6,8 @@
 const arg = process.argv;
 const fs = require('fs');
 
-fs.writeFile(arg[2], arg[3], (err, data) => {
+const data = arg[3];
+fs.writeFile(arg[2], data, (err, data) => {
   if (err) throw err;
   console.log(data);
 });
