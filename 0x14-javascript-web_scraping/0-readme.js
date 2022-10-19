@@ -6,7 +6,7 @@
 const arg = process.argv;
 const fs = require('fs');
 
-fs.readFile(arg[1], 'utf-8', (err, data) => {
+fs.readFile(arg[2], 'utf-8', (err, data) => {
   if (err) throw err;
   console.log(data);
 });
