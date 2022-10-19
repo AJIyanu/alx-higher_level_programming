@@ -1,3 +1,4 @@
+#!/usr/bin/node
 // interact with a file
 // print out the text in utf8
 // print error if error
