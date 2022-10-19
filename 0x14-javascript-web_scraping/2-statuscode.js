@@ -7,4 +7,4 @@ const req = new XMLHttpRequest();
 req.open('GET', arg[2], false);
 req.send();
 const result = req.responseText;
-console('code: ' + result.status);
+console('code: ' + result);
