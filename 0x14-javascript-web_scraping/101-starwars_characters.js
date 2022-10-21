@@ -1,12 +1,12 @@
 #!/usr/bin/node
 
 const request = require('request');
-let charlist = [];
+let charlist;
 request('https://swapi-api.hbtn.io/api/films/' + process.argv[2], function (error, response) {
   if (error) {
     console.error(error);
   }
-  charlist = charlist.push(JSON.parse(response.body).characters);
+  charlist = JSON.parse(response.body).characters;
 });
 console.log(charlist);
 for (let i = 0; i < charlist.length; i++) {
