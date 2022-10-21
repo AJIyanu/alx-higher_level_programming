@@ -14,7 +14,7 @@ request(process.argv[2], function(error, response) {
     if (allbdy[i].userId in dict) {
       if (allbdy[i].completed === true) {
         const key = allbdy[i].userId;
-        dict[key] = dict.key + 1;
+        dict[key] = dict[key] + 1;
       }
     } else {
       const key = allbdy[i].userId;
