@@ -10,6 +10,9 @@ request('https://swapi-api.hbtn.io/api/films/' + process.argv[2], function (erro
   for (i in charlist) {
     console.log(i);
     request(charlist[i], function (err, resp) {
+  for (const i of charlist) {
+    let url = charlist[i]
+    request(url, function (err, resp) {
       if (err) {
         console.error(err);
       }
