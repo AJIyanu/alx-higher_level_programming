@@ -5,14 +5,16 @@ request('https://swapi-api.hbtn.io/api/films/' + process.argv[2], function (erro
   if (error) {
     console.error(error);
   }
-  let charlist = JSON.parse(response.body).characters;
+  const charlist = JSON.parse(response.body).characters;
   console.log(charlist);
-  for (const i of charlist) {
+  for (i in charlist) {
+    console.log(i);
     request(charlist[i], function (err, resp) {
       if (err) {
         console.error(err);
       }
-      console.log(JSON.parse(resp.body).name, charlist[i]);
+      console.log(i, JSON.parse(resp.body).name, charlist[i]);
     });
+    console.log(i);
   }
 });
