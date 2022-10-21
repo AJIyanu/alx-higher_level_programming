@@ -1,7 +1,7 @@
 #!/usr/bin/node
 // send a get request to a server
 
-import fetch from 'node-fetch';
+const fetch = require('node-fetch')
 
 const arg = process.argv;
 
