@@ -4,11 +4,11 @@
 
 const request = require('request');
 
-request(process.argv[2], function(error, response) {
+request(process.argv[2], function (error, response) {
   if (error) {
     console.error(error);
   }
-  let dict = {};
+  const dict = {};
   const allbdy = JSON.parse(response.body);
   for (let i = 0; i < allbdy.length; i++) {
     if (allbdy[i].userId in dict) {
@@ -20,8 +20,6 @@ request(process.argv[2], function(error, response) {
       const key = allbdy[i].userId;
       if (allbdy[i].completed === true) {
         dict[key] = 1;
-      } else {
-        dict[key] = 0;
       }
     }
   }
