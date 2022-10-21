@@ -10,6 +10,6 @@ request(process.argv[2], function(error, response) {
   }
   let dict = {};
   const allbdy = JSON.parse(response.body);
-  console.log(typeof (allbdy));
+  console.log(typeof (allbdy[0]));
 }
 );
