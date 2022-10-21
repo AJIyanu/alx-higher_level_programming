@@ -4,12 +4,12 @@
 
 const request = require('request');
 
-request(process.argv[2], function(error, body) {
+request(process.argv[2], function(error, response) {
   if (error) {
     console.error(error);
   }
   let dict = {};
-  const allbdy = JSON.parse(body.body);
-  console.log(allbdy);
+  const allbdy = JSON.parse(response.body);
+  console.log(typeof (allbdy));
 }
 );
