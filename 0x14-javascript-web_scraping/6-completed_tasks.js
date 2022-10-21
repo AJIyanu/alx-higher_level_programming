@@ -9,7 +9,7 @@ request(process.argv[2], function(error, body) {
     console.error(error);
   }
   let dict = {};
-  const allbdy = body;
+  const allbdy = JSON.parse(body);
   console.log(allbdy);
 }
 );
