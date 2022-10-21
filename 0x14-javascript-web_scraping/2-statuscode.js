@@ -8,7 +8,7 @@ const arg = process.argv;
 function makeRequest () {
   fetch(arg[2])
     .then(response => {
-      console.log('code: ', response.status);
+      console.log('code:', response.status);
     })
     .catch(err => {
       console.log(err);
