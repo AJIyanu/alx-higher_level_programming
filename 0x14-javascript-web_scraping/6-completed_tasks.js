@@ -16,16 +16,15 @@ request(process.argv[2], function(error, response) {
         const key = allbdy[i].userId;
         dict.key = dict.key + 1;
       }
-    else {
+    } else {
       const key = allbdy[i].userId;
       if (allbdy[i].completed === true) {
         dict.key = 1;
+      } else {
+        dict.key = 0;
       }
-      else {
-      dict.key = 0
     }
-    }
-}
+  }
   console.log(dict);
 }
 );
