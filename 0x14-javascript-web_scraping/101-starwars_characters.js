@@ -11,18 +11,18 @@ request('https://swapi-api.hbtn.io/api/films/' + process.argv[2], function (erro
   for (const i in charlist) {
     const url = charlist[i];
     // console.log(url);
-    work(url, dict);
+    dict[url] = work(url);
   }
   console.log(dict);
 });
 
-const work = async (url, dict) => {
+const work = async (url) => {
   await sleep(1000);
   request(url, function (err, resp) {
     if (err) {
       console.error(err);
     }
-    dict[url] = JSON.parse(resp.body).name;
+    return (JSON.parse(resp.body).name);
   });
 };
 
