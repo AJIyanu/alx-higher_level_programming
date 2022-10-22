@@ -11,6 +11,10 @@ request.get(url, function (err, response) {
     request(character, function (err, response, content) {
       if (!err) {
         console.log(JSON.parse(content).name);
+        while (!JSON.parse(content).name) {
+          let i = 0;
+          i = i + i;
+        }
       }
     });
   });
