@@ -15,12 +15,12 @@ request('https://swapi-api.hbtn.io/api/films/' + process.argv[2], function (erro
 });
 
 const work = async (url) => {
-  await sleep(3000);
+  await sleep(5000);
   request(url, function (err, resp) {
     if (err) {
       console.error(err);
     }
-    console.log(JSON.parse(resp.body).name);
+    console.log(JSON.parse(resp.body).name, url);
   });
 };
 
