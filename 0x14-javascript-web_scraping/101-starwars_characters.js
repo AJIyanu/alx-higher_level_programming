@@ -1,12 +1,12 @@
 #!/usr/bin/node
 const request = require('request');
-const url = 'https://swapi.co/api/films/' + process.argv[2];
+const url = 'http://swapi-api.hbtn.io/api/films/' + process.argv[2];
 request.get(url, function (err, response) {
   if (err) {
     console.log(err);
     return;
   }
-  const characters = JSON.parse(body).characters;
+  const characters = JSON.parse(response.body).characters;
     characters.forEach((character) => {
       request(character, function (err, response, content) {
         if (!err) {
