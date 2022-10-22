@@ -12,6 +12,7 @@ request('https://swapi-api.hbtn.io/api/films/' + process.argv[2], function (erro
     const url = charlist[i];
     // console.log(url);
     dict[url] = work(url);
+    sleep(6000);
   }
   console.log(dict);
 });
