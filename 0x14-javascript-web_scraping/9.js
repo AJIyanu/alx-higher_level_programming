@@ -7,15 +7,27 @@ request.get(url, function (err, response) {
     return;
   }
   const characters = JSON.parse(response.body).characters;
+  const dict = {};
   characters.forEach((character) => {
-    setTimeout(console.log(req(character)), 5000);
+    dict[character] = req(character);
   });
+  console.log(dict);
 });
 
 function req (character) {
   request(character, function (err, response) {
+    sleep(9000);
     if (!err) {
+      console.log((JSON.parse(response.body).name));
       return (JSON.parse(response.body).name);
     }
   });
+}
+
+function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
 }
