@@ -17,7 +17,7 @@ request('https://swapi-api.hbtn.io/api/films/' + process.argv[2], function (erro
 });
 
 const work = async (url) => {
-  await sleep(1000);
+  // await sleep(1000);
   request(url, function (err, resp) {
     if (err) {
       console.error(err);
