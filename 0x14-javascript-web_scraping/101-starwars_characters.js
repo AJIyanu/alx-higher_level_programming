@@ -1,21 +1,27 @@
 #!/usr/bin/node
-const { run } = require('node:test');
 const request = require('request');
-const url = 'http://swapi-api.hbtn.io/api/films/' + process.argv[2];
-request.get(url, function (err, response) {
-  if (err) {
-    console.log(err);
-    return;
-  }
-  const characters = JSON.parse(response.body).characters;
-  characters.forEach((character) => {
-    setTimeout(function run (character) {
-      request(character, function (err, response) {
-        if (!err) {
-          console.log(JSON.parse(response.body).name);
+const film = process.argv[2];
+let url = 'http://swapi.co/api/people/';
+function filmcharacters (film, url) {
+  request(url, function (err, response, body) {
+    if (err) {
+      console.log(err);
+    } else if (response.statusCode === 200) {
+      let jsonobj = JSON.parse(body);
+      let people = jsonobj.results;
+      for (let i in people) {
+        for (let j in people[i].films) {
+          if (people[i].films[j].includes(film)) {
+            console.log(people[i].name);
+          }
         }
-      });
-    }, 5000);
-    run(character);
+      }
+      if (jsonobj.next !== null) {
+        filmcharacters(film, jsonobj.next);
+      }
+    } else {
+      console.log('An error occured. Status code: ' + response.statusCode);
+    }
   });
-});
+}
+filmcharacters(film, url);
