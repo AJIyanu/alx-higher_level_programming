@@ -20,7 +20,7 @@ const work = async (url) => {
     if (err) {
       console.error(err);
     }
-    console.lo(JSON.parse(resp.body).name);
+    console.log(JSON.parse(resp.body).name);
   });
 };
 
