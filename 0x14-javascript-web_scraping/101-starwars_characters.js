@@ -7,12 +7,12 @@ request.get(url, function (err, response) {
     return;
   }
   const characters = JSON.parse(response.body).characters;
-    characters.forEach((character) => {
-      request(character, function (err, response, content) {
-        if (!err) {
-          console.log(JSON.parse(content).name);
-        }
-      });
+  characters.forEach((character) => {
+    request(character, function (err, response, content) {
+      if (!err) {
+        console.log(JSON.parse(content).name);
+      }
     });
-  }
-});
+  });
+}
+);
