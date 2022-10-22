@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const request = require('request');
 const film = process.argv[2];
-let url = 'http://swapi.co/api/people/';
+const url = 'http://swapi-api.hbtn.io/api/films/';
 function filmcharacters (film, url) {
   request(url, function (err, response, body) {
     if (err) {
