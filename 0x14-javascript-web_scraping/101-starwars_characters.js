@@ -6,7 +6,7 @@ request.get(url, function (err, response) {
     const charlist = JSON.parse(response.body).characters;
     console.log(charlist);
     for (let i = 0; i < charlist.length; i++) {
-      console.log(function () {
+      console.log(() => {
         request.get(charlist[i], function (error, response) {
           if (!error) {
             return (JSON.parse(response.body).name);
