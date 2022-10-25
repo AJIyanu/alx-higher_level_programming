@@ -16,11 +16,11 @@ request.get('http://swapi-api.hbtn.io/api/people', function (err, response) {
             chardict[charlist[i].url] = charlist[i].name;
           }
           console.log(chardict);
-          console.log(chardict.length);
+          console.log(Object.keys(chardict).length);
         }
       });
-    // console.log(chardict);
-    // console.log(chardict.length);
+      // console.log(chardict);
+      console.log(Object.keys(chardict).length);
     }
   }
 });
