@@ -17,8 +17,8 @@ request.get('http://swapi-api.hbtn.io/api/people', function (err, response) {
           }
         }
       });
+      console.log(chardict);
+      console.log(chardict.length);
     }
-    console.log(chardict);
-    console.log(chardict.length);
   }
 });
