@@ -8,7 +8,6 @@ request.get('http://swapi-api.hbtn.io/api/people', function (err, response) {
     for (let i = 0; i < charlist.length; i++) {
       chardict[charlist[i].url] = charlist[i].name;
     }
-    console.log(chardict);
     for (let page = 2; page < 10; page++) {
       request.get('http://swapi-api.hbtn.io/api/people/?page=' + page, function (err, response) {
         if (!err) {
@@ -17,8 +16,9 @@ request.get('http://swapi-api.hbtn.io/api/people', function (err, response) {
             chardict[charlist[i].url] = charlist[i].name;
           }
         }
-        console.log(chardict);
       });
     }
+    console.log(chardict);
+    console.log(chardict.length);
   }
 });
