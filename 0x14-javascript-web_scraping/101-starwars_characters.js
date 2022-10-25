@@ -15,10 +15,11 @@ request.get('http://swapi-api.hbtn.io/api/people', function (err, response) {
           for (let i = 0; i < charlist.length; i++) {
             chardict[charlist[i].url] = charlist[i].name;
           }
+          console.log(chardict);
         }
       });
-      console.log(chardict);
-      console.log(chardict.length);
+    // console.log(chardict);
+    // console.log(chardict.length);
     }
   }
 });
