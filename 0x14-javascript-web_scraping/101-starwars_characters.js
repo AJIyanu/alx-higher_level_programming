@@ -6,8 +6,8 @@ request.get('http://swapi-api.hbtn.io/api/people', function (err, response) {
     const charlist = JSON.parse(response.body).results;
     const chardict = {};
     for (let i = 0; i < charlist.length; i++) {
-      console.log(charlist[i].name, charlist[i].url);
+      chardict[charlist[i].url] = charlist[i].name;
     }
-    // console.log(charlist);
+    console.log(chardict);
   }
 });
