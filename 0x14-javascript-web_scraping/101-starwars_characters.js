@@ -21,6 +21,7 @@ async function now (urlfun) {
     }
   });
   await sleep(5000);
+  console.log("wait over");
 }
 
 async function sleep (ms) {
