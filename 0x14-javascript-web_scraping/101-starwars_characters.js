@@ -14,7 +14,7 @@ request.get(url, function (err, response) {
             console.log(people);
           }
         });
-      }}
+      }
     }
-  });
-};
+  }
+});
