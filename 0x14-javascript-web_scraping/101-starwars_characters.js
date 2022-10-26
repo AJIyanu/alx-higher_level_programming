@@ -7,13 +7,12 @@ request.get(url, function (err, response) {
     console.log(charlist);
     let i = 0;
     while (i < charlist.length) {
-      now(charlist[i])
-        .then(i = i + 1);
+      now(charlist[i], i);
     }
   }
 });
 
-async function now (urlfun) {
+async function now (urlfun, count) {
   request.get(urlfun, function (error, response) {
     if (!error) {
       const people = JSON.parse(response.body).name;
@@ -21,7 +20,8 @@ async function now (urlfun) {
     }
   });
   await sleep(5000);
-  console.log("wait over");
+  console.log('wait over');
+  count++;
 }
 
 async function sleep (ms) {
