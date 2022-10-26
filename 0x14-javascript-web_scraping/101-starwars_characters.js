@@ -14,10 +14,7 @@ request.get(url, function (err, response) {
             console.log(people);
           }
         });
-      }
-      .then(() => {
-          i = i + 1;
-        });
+      }}
     }
-  }
-});
+  });
+};
