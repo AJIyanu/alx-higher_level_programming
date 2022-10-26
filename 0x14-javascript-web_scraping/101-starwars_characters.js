@@ -7,13 +7,15 @@ request.get(url, function (err, response) {
     console.log(charlist);
     let i = 0;
     while (i < charlist.length) {
-      request.get(charlist[i], function (error, response) {
-        if (!error) {
-          const people = JSON.parse(response.body).name;
-          console.log(people);
-        }
-      })
-        .then(() => {
+      async () => {
+        request.get(charlist[i], function (error, response) {
+          if (!error) {
+            const people = JSON.parse(response.body).name;
+            console.log(people);
+          }
+        });
+      }
+      .then(() => {
           i = i + 1;
         });
     }
