@@ -16,7 +16,6 @@ if __name__ == "__main__":
     session = sessionmaker(bind=engine)()
     results = session.query(State).filter(State.name.contains("a"))
 
-    count = 1
     for states in results:
-        print("{}: {}".format(count, states.name))
+        print("{}: {}".format(states.id, states.name))
         count = count + 1
