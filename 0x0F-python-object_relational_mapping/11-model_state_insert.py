@@ -19,5 +19,5 @@ if __name__ == "__main__":
     session.add(Louisiana)
     session.commit()
     results = session.query(State).filter(State.name.like("Louisiana"))
-    print(results.id)
+    print(results)
     session.close()
