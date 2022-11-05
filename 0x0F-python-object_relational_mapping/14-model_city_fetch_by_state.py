@@ -15,6 +15,6 @@ if __name__ == "__main__":
     connection = engine.connect()
     Base.metadata.create_all(engine)
     session = sessionmaker(bind=engine)()
-    results = session.query(City).all()
+    results = session.query(City, State).all()
     for cities in results:
         print(cities)
