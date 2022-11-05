@@ -14,5 +14,5 @@ if __name__ == "__main__":
     connection = engine.connect()
     Base.metadata.create_all(engine)
     session = sessionmaker(bind=engine)()
-    results = session.query(State)
-    print(results)
+    results = session.query(State).first()
+    print("1: {}".format(results.name))
