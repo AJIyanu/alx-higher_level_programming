@@ -14,7 +14,7 @@ if __name__ == "__main__":
     connection = engine.connect()
     Base.metadata.create_all(engine)
     session = sessionmaker(bind=engine)()
-    results = session.query(State).filter_by(name = 'a')
+    results = session.query(State).filter_by(State.name.contains("a"))
 
     count = 1
     for states in results:
