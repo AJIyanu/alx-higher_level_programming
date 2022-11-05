@@ -14,5 +14,7 @@ if __name__ == "__main__":
     session = sessionmaker(bind=engine)()
     results = session.query(State).all()
 
+    count = 1
     for states in results:
-        print(states.name)
+        print("{}: {}".format(count, states.name))
+        count = count + 1
