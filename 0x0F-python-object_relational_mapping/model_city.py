@@ -7,6 +7,7 @@ Base = declarative_base:
 from sqlalchemy import Column, Integer, String, ForeignKey
 from model_state import Base
 
+
 class City(Base):
     """A City clas that links to MySql table ciy"""
 
