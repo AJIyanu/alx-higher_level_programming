@@ -21,8 +21,4 @@ if __name__ == "__main__":
     newcity.state = California
     session.add(California, newcity)
     session.commit()
-    results = session.query(State).all()
-    for state in results:
-        if state.name == "Louisiana":
-            print(state.id)
     session.close()
