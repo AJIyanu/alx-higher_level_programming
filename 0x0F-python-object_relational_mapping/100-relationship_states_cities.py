@@ -12,9 +12,9 @@ if __name__ == "__main__":
                                                       sys.argv[2], sys.argv[3])
     engine = create_engine(url, pool_pre_ping=True)
 
-    connection = engine.connect()
     Base.metadata.create_all(engine)
-    session = sessionmaker(bind=engine)()
+    Session = sessionmaker(bind=engine)
+    session = Session()
+
     session.add(City(name="San Francisco", state=State(name="California")))
     session.commit()
-    session.close()
