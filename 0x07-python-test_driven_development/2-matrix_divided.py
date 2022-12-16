@@ -1,40 +1,38 @@
 #!/usr/bin/python3
 """
-This is a matrix.module
-we will be given a  matrix
-and we will divide the content
-by a number we will also be given
-the module eventuallu returns a new matrix
+This is the ``Matrix`` module
+
+Contains the function ``matrix_divided`` which divides a matrix of ints/floats
+by a given int
 """
 
 
 def matrix_divided(matrix, div):
     """
-    This describe the matrix
-    it is a square matrix of integers or float
-    divisor cannot be zero or non number
+    Return a new_matrix of all items in matrix divided by div, all items in
+    new_matrix should be floats rounde to 2 decimal points max
     """
-    if type(matrix) is not list:
-        raise TypeError("matrix must be a matrix\
-(list of lists) of integers/floats")
-    if type(matrix[0]) is not list:
-        raise TypeError("matrix must be a matrix\
-(list of lists) of integers/floats")
-    for r in range(len(matrix)):
-        lth = len(matrix[0])
-        if len(matrix[r]) != lth:
-            raise TypeError("Each row of the matrix must have the same size")
-        for c in range(len(matrix[r])):
-            val = matrix[r][c]
-            if type(val) is not int and type(val) is not float:
-                raise TypeError("matrix must be a matrix\
-(list of lists) of integers/floats")
-    if type(div) is not int and type(div) is not float:
+    lengths = []
+    new_matrix = []
+    type_error = "matrix must be a matrix (list of lists) of integers/floats"
+    if not isinstance(div, int) and not isinstance(div, float):
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
-    newlist = matrix.copy()
-    for y in range(len(newlist)):
-        for x in range(len(newlist[y])):
-            newlist[y][x] = round(newlist[y][x] / div, 2)
-    return (newlist)
+    if not isinstance(matrix, list) or not matrix:
+        raise TypeError(type_error)
+    for i in matrix:
+        quotients = []
+        if not isinstance(i, list) or not i:
+            raise TypeError(type_error)
+        for x in i:
+            if not isinstance(x, int) and not isinstance(x, float):
+                raise TypeError(type_error)
+            quotients.append(round(x / div, 2))
+        length = len(i)
+        if length not in lengths:
+            lengths.append(length)
+        new_matrix.append(quotients)
+    if len(lengths) != 1:
+        raise TypeError("Each row of the matrix must have the same size")
+    return new_matrix
